@@ -43,7 +43,7 @@ form {
     margin: .75rem 0;
 }
 
-input, textarea {
+input, textarea, select {
     border: 1px solid lightgrey;
     outline: none;
     font-size: 100%;

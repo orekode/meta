@@ -10,24 +10,26 @@
 @foreach ($cards as $card)
 
     @if ($card->name == 'header')
-        <header class = 'p-rel full-w' style = '--background_url: url("{{asset('/images/home/' . $card->image ?? 'luli.jpeg')}}")'>   
-            <div class = 'content flex-col-center'>
-                <h1> {{$card->title}}</h1>
-    
-                <p>
-                    {{$card->content}}
-                </p>
-    
-                <button class = 'flex-row flex-center' onclick = 'location.href = "{{route("programmes")}}"'>
-                    <i class="bi bi-calendar-week-fill"></i>
-                    <span>Ongoing Programmes</span>
-                </button>
-            </div>
+        <header class = 'p-rel full-w' style = '--background_url: url("{{asset('/images/home/' . $card->image ?? 'luli.jpeg')}}")'> 
+            <div class="enclose">
+                <div class = 'content flex-col-center'>
+                    <h1> {{$card->title}}</h1>
+        
+                    <p>
+                        {{$card->content}}
+                    </p>
+        
+                    <button class = 'flex-row flex-center' onclick = 'location.href = "{{route("programmes")}}"'>
+                        <i class="bi bi-calendar-week-fill"></i>
+                        <span>Ongoing Programmes</span>
+                    </button>
+                </div>
+            </div>  
         </header>
     @endif
 
     @if ($card->name == 'first_section')
-        <section>
+        <section class="enclose">
             <div class = 'large-card'>
 
                 <div class = 'image'>
@@ -57,7 +59,7 @@
     @endif
 
     @if ($card->name == 'second_section_card_one')
-        <section>
+        <section class="enclose">
             <div class="card-box">
 
                 <div class="card">
@@ -145,12 +147,12 @@
 
             
     @if ($card->name == 'third_section_card_one')
-        <section class = 'different p-rel'>
+        <section class = 'different p-rel '>
             <h1 class = 'text-center p-rel z-2 '>
                 How We Help
             </h1>
     
-            <div class = 'values p-rel z-2'>
+            <div class = 'values p-rel z-2 enclose'>
                 <div class = 'value'>
                     <div class = 'icon round ov-hidden'>
                         <img src = '{{asset( '/images/home/' . $card->image ?? "/images/money.png")}}' class = 'obj-fit' alt=''>
@@ -231,7 +233,7 @@
     @endif
 
     @if ($card->name == 'fourth_section')
-        <section>
+        <section class="enclose">
             <div class = 'large-card inverse'>
 
                 <div class = 'content'>

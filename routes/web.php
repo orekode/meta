@@ -6,6 +6,7 @@ use App\Http\Controllers\Home;
 use App\Http\Controllers\About;
 use App\Http\Controllers\Program;
 use App\Http\Controllers\Contact;
+use App\Http\Controllers\DonateController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,7 @@ Route::get('/about', [About::class, 'index'])->name('about');
 Route::get('/programmes',  [Program::class, 'index'])->name('programmes');
 
 Route::get('/contact', [Contact::class, 'index'])->name('contact');
+Route::get('/donate', [DonateController::class, 'index'])->name('donate');
 
 //programmes description and details
 

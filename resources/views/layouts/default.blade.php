@@ -14,11 +14,10 @@
 
 </head>
 <body>
-
     <x-navigation />
 
     <section class='layout-content'>
-    @yield('contents')
+        @yield('contents')
     </section>
 
 

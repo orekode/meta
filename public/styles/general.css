@@ -28,6 +28,11 @@ body {
   display: none;
 }
 
+.enclose {
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
 body.active {
   display: block;
 }

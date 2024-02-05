@@ -8,90 +8,93 @@
 
 @section('contents')
 
-    <h1 class = 'title'>Our Programs</h1>
+    <section class="enclose">
 
-    <section class = 'cards p-rel'>
-
-        @foreach ($programmes as $programme )
-            <div class = 'card p-rel' @if($programme['title'] == "Empower Special Learners") onclick="location.href = '{{route('special_kids_programme')}}';" @endif>
+        <h1 class = 'title'>Our Programs</h1>
+    
+        <section class = 'cards p-rel'>
+    
+            @foreach ($programmes as $programme )
+                <div class = 'card p-rel' @if($programme['title'] == "Empower Special Learners") onclick="location.href = '{{route('special_kids_programme')}}';" @endif>
+                    <div class="image full-hw p-rel">
+                        <img src="{{asset("images/program/" . $programme['image'] ?? "luli.jpeg")}}" alt="" class="obj-fit">
+                        <div class = 'overlay p-abs top-left full-hw'></div>
+                    </div>
+    
+                    <div class = 'content p-abs btm-left full-w'>
+                        <h1>{{$programme['title']}}</h1>
+                        <p>
+                            {{$programme['content']}}
+                        </p>
+    
+                        <button onclick = 'donate();'>Donate</button>
+                    </div>
+                </div>
+            @endforeach
+            
+            {{-- <div class = 'card p-rel'>
                 <div class="image full-hw p-rel">
-                    <img src="{{asset("images/program/" . $programme['image'] ?? "luli.jpeg")}}" alt="" class="obj-fit">
+                    <img src="{{asset("images/luli_3.jpeg")}}" alt="" class="obj-fit">
                     <div class = 'overlay p-abs top-left full-hw'></div>
                 </div>
-
+    
                 <div class = 'content p-abs btm-left full-w'>
-                    <h1>{{$programme['title']}}</h1>
+                    <h1>School Supplies Drive</h1>
                     <p>
-                        {{$programme['content']}}
+                        Collection of educational materials such as books, stationeries, and backpacks for underprivileged students.
                     </p>
-
-                    <button onclick = 'donate();'>Donate</button>
+    
+                    <button>Donate</button>
                 </div>
             </div>
-        @endforeach
-        
-        {{-- <div class = 'card p-rel'>
-            <div class="image full-hw p-rel">
-                <img src="{{asset("images/luli_3.jpeg")}}" alt="" class="obj-fit">
-                <div class = 'overlay p-abs top-left full-hw'></div>
+    
+            <div class = 'card p-rel'>
+                <div class="image full-hw p-rel">
+                    <img src="{{asset("images/luli_2.jpeg")}}" alt="" class="obj-fit">
+                    <div class = 'overlay p-abs top-left full-hw'></div>
+                </div>
+    
+                <div class = 'content p-abs btm-left full-w'>
+                    <h1>Financial Aid Program</h1>
+                    <p>
+                        Providing monetary assistance to families in need to pay for school fees and other educational expenses.
+                    </p>
+    
+                    <button>Donate</button>
+                </div>
             </div>
-
-            <div class = 'content p-abs btm-left full-w'>
-                <h1>School Supplies Drive</h1>
-                <p>
-                    Collection of educational materials such as books, stationeries, and backpacks for underprivileged students.
-                </p>
-
-                <button>Donate</button>
+            
+            <div class = 'card p-rel'>
+                <div class="image full-hw p-rel">
+                    <img src="{{asset("images/luli.jpeg")}}" alt="" class="obj-fit">
+                    <div class = 'overlay p-abs top-left full-hw'></div>
+                </div>
+    
+                <div class = 'content p-abs btm-left full-w'>
+                    <h1>Teacher Training Initiative</h1>
+                    <p>
+                        Offering training and support to educators in underfunded schools to improve the quality of education.
+                    </p>
+    
+                    <button>Donate</button>
+                </div>
             </div>
-        </div>
-
-        <div class = 'card p-rel'>
-            <div class="image full-hw p-rel">
-                <img src="{{asset("images/luli_2.jpeg")}}" alt="" class="obj-fit">
-                <div class = 'overlay p-abs top-left full-hw'></div>
-            </div>
-
-            <div class = 'content p-abs btm-left full-w'>
-                <h1>Financial Aid Program</h1>
-                <p>
-                    Providing monetary assistance to families in need to pay for school fees and other educational expenses.
-                </p>
-
-                <button>Donate</button>
-            </div>
-        </div>
-        
-        <div class = 'card p-rel'>
-            <div class="image full-hw p-rel">
-                <img src="{{asset("images/luli.jpeg")}}" alt="" class="obj-fit">
-                <div class = 'overlay p-abs top-left full-hw'></div>
-            </div>
-
-            <div class = 'content p-abs btm-left full-w'>
-                <h1>Teacher Training Initiative</h1>
-                <p>
-                    Offering training and support to educators in underfunded schools to improve the quality of education.
-                </p>
-
-                <button>Donate</button>
-            </div>
-        </div>
-
-        <div class = 'card p-rel'>
-            <div class="image full-hw p-rel">
-                <img src="{{asset("images/luli_3.jpeg")}}" alt="" class="obj-fit">
-                <div class = 'overlay p-abs top-left full-hw'></div>
-            </div>
-
-            <div class = 'content p-abs btm-left full-w'>
-                <h1>School Supplies Drive</h1>
-                <p>
-                    Collection of educational materials such as books, stationeries, and backpacks for underprivileged students.
-                </p>
-
-                <button>Donate</button>
-            </div>
-        </div> --}}
+    
+            <div class = 'card p-rel'>
+                <div class="image full-hw p-rel">
+                    <img src="{{asset("images/luli_3.jpeg")}}" alt="" class="obj-fit">
+                    <div class = 'overlay p-abs top-left full-hw'></div>
+                </div>
+    
+                <div class = 'content p-abs btm-left full-w'>
+                    <h1>School Supplies Drive</h1>
+                    <p>
+                        Collection of educational materials such as books, stationeries, and backpacks for underprivileged students.
+                    </p>
+    
+                    <button>Donate</button>
+                </div>
+            </div> --}}
+        </section>
     </section>
 @endsection

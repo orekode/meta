@@ -10,7 +10,7 @@
 
     <section class = 'full-w p-rel'>
 
-        <div class="left-right p-rel z-2">
+        <div class="left-right p-rel z-2 enclose">
             <div class="left flex-col-center text-center">
                 <h1 class = "text-center">Contact Us</h1>
 
