@@ -41,7 +41,7 @@
             </div>
     
             <div class="right flex-row">
-                <button class = 'flex-row flex-center' onclick = 'donate();'>
+                <button class = 'flex-row flex-center' onclick = 'location.href = "/donate"'>
                     <i class="bi bi-heart-fill"></i>
                     <span>Make a donation</span>
                 </button>

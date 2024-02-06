@@ -13,7 +13,7 @@ class StoreDonateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,20 @@ class StoreDonateRequest extends FormRequest
      */
     public function rules()
     {
+
         return [
-            //
+            "first_name"    => [''],
+            "last_name"     => [''],
+            "email"         => ['email'],
+            "contact"       => ['numeric'],
+            "programme"     => ['required', 'exists:group_cards,id'],
+            "payment_type"  => ['required'],
+            "amount"        => ['required', 'numeric'],
+            "donation_type" => ['required'],
+            "image"         => [''],
+            "reference"     => ['required'],
         ];
+
+        // return [];
     }
 }

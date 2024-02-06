@@ -370,3 +370,26 @@ input[type="file"] {
         padding: 1rem;
     }
 }
+
+.error {
+    color: red;
+    font-size: 70%;
+}
+
+@media ( max-width: 400px ) {
+    .grid-box > div, .grid-input .flex-col, .grid-image {
+        width: 80vw;
+    }
+
+    .donation-box .close {
+        background: rgb(255, 65, 65);
+        height: 35px;
+        width: 35px;
+        border: 1px solid white;
+        border-radius: 100%;
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: 110%;
+    }
+}
