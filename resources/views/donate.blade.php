@@ -397,7 +397,7 @@
 
 
             let handler = PaystackPop.setup({
-                key: 'pk_test_9c36a8f1629bab4339b8fced7c3f999d4456e5ac', // Replace with your public key
+                key: 'pk_test_ac5434ad89fb076f61986fd94e18adaf6bedc0d4', // Replace with your public key
                 email: data['email'] ?? data['contact'],
                 amount: parseFloat(data['amount']) * 100,
                 currency: 'GHS',
