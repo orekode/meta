@@ -400,7 +400,7 @@
                 key: 'pk_test_ac5434ad89fb076f61986fd94e18adaf6bedc0d4', // Replace with your public key
                 email: data['email'] ?? data['contact'],
                 amount: parseFloat(data['amount']) * 100,
-                currency: 'GHS',
+                currency: 'NGH',
                 callback: function(response) {
                     // let message = 'Payment complete! Reference: ' + response.reference;
 
