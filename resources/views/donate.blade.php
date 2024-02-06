@@ -1,7 +1,6 @@
 @extends('layouts.default')
 
 @section('styles')
-@vite('resources/js/app.js')
 
     <link rel = 'stylesheet' href = '{{asset("styles/components/navigation.css")}}'>
     <link rel = 'stylesheet' href = '{{asset("styles/components/footer.css")}}'>
