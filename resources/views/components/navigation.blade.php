@@ -28,6 +28,11 @@
                         'name' => 'Contact Us',
                         'link' => route('contact'),
                     ],
+
+                    [
+                        'name' => 'Gallery',
+                        'link' => '/gallery',
+                    ],
                 ])
     
                 <div class = 'nav flex-row desktop'>
@@ -62,6 +67,10 @@
                             {{$nav_item['name']}}
                         </div>
                     @endforeach
+
+                    <div class="menu-item" onclick = 'location.href = "/donate"'>
+                        Make a donation
+                    </div>
                 </div>
             </div>
         </div>
